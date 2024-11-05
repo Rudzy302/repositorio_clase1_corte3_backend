@@ -1,0 +1,30 @@
+
+{
+    "parser": "@typescript-eslint/parser", // sirve para que eslint pueda entender el código de TypeScript y pueda aplicar las reglas de TS
+    "extends": [ // sirve para extender las reglas de otros archivos de configuración
+      "airbnb-base",
+      "airbnb-typescript/base",
+      "eslint:recommended",  //habilitan todas las reglas de JavaScript recomendadas por ESLint
+      "plugin:@typescript-eslint/recommended"
+    ],
+    "parserOptions": { // sirve para configurar el parser de TypeScript
+      "project": "./tsconfig.json", // sirve para que ESLint pueda entender las configuraciones de TypeScript
+      "tsconfigRootDir": "./", 
+      "sourceType": "module" 
+    // el npx tsc compila el código TypeScript a JavaScript porque el Node.js no entiende TypeScript, verificando que no haya errores de sintaxis en el archivo
+    },
+    // el npm run build sirve para compilar el código TypeScript a JavaScript de la carpeta src a la carpeta build
+    "rules": {
+      "import/prefer-default-export": "off",
+      "class-methods-use-this": "off",
+      "import/no-extraneous-dependencies": "off",
+      "no-param-reassign": "off",
+      "no-throw-literal": "off",
+      "@typescript-eslint/no-throw-literal": "off",
+      "no-restricted-syntax": "off",
+      "max-len": "off",
+      "no-console": "off",
+      "@typescript-eslint/no-explicit-any": "off",
+      "quotes": ["error", "single"]
+    }
+  }

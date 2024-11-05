@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "module": "commonjs", //define el tipo de módulo a utilizar
+    "removeComments": true, //remueve los comentarios del código
+    "moduleResolution": "node", //resuelve los módulos de node
+    "allowSyntheticDefaultImports": true,   //permite la importación de módulos sin exportar
+    "noUnusedLocals": true, //crea una advertencia acerca de las variables que no se usan
+    "noUnusedParameters": true, //crea una advertencia acerca de los parámetros que no se usan
+    "sourceMap": true, //genera un archivo de mapa de origen
+    "target": "es6",  //especifica la versión de ECMAScript a la que se compilará el código
+    "outDir": "./build", //especifica el directorio de salida
+    "baseUrl": "./", //especifica la ubicación de los archivos base
+    "resolveJsonModule": true, //permite la importación de archivos JSON
+    "paths": {  //especifica los módulos y sus ubicaciones
+      "Modules/*": ["src/modules/*"] //especifica la ubicación de los módulos
+    }
+  },
+  "lib": ["es2015"],
+  "include": ["src/**/*.ts"],
+  "exclude": [
+    "node_modules/**/*",
+    ".vscode/**/*"
+  ]
+}
